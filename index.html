@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2048小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="title">
+            <h1>2048小游戏</h1>
+        </header>
+        <div class="container">
+            <div class="boxes">
+                <div class="row">
+                    <div class="box emptyBox x0y0" data-x="0" data-y="0"></div>
+                    <div class="box emptyBox x0y1" data-x="0" data-y="1"></div>
+                    <div class="box emptyBox x0y2" data-x="0" data-y="2"></div>
+                    <div class="box emptyBox x0y3" data-x="0" data-y="3"></div>
+                </div>
+                <div class="row">
+                    <div class="box emptyBox x1y0" data-x="1" data-y="0"></div>
+                    <div class="box emptyBox x1y1" data-x="1" data-y="1"></div>
+                    <div class="box emptyBox x1y2" data-x="1" data-y="2"></div>
+                    <div class="box emptyBox x1y3" data-x="1" data-y="3"></div>
+                </div>
+                <div class="row">
+                    <div class="box emptyBox x2y0" data-x="2" data-y="0"></div>
+                    <div class="box emptyBox x2y1" data-x="2" data-y="1"></div>
+                    <div class="box emptyBox x2y2" data-x="2" data-y="2"></div>
+                    <div class="box emptyBox x2y3" data-x="2" data-y="3"></div>
+                </div>
+                <div class="row">
+                    <div class="box emptyBox x3y0" data-x="3" data-y="0"></div>
+                    <div class="box emptyBox x3y1" data-x="3" data-y="1"></div>
+                    <div class="box emptyBox x3y2" data-x="3" data-y="2"></div>
+                    <div class="box emptyBox x3y3" data-x="3" data-y="3"></div>
+                </div>
+            </div>
+            <div class="scores">
+                <div class="maxScore">历史最高分：<span id="maxScore"></span>分</div>
+                <div class="currScore">本局得分：<span id="currScore"></span>分</div>
+            </div>
+            <div class="playAgain">
+                <button class="btn btn-info refreshBtn">再来一次</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="global.js"></script>
+</body>
+</html>
