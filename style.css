@@ -17,9 +17,11 @@ body {
 
 header {
     text-align: center;
-    font-size: 1em;
     color: #F4A460;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 20px;
 }
 
 .container {
@@ -31,7 +33,7 @@ header {
 }
 
 .container .boxes {
-    font-size: 1.5em;
+    font-size: 22px;
     font-weight: bold;
     width: 330px;
     height: 370px;
@@ -62,14 +64,14 @@ header {
 }
 
 .scores {
-    font-size: 1em;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
     color: #8B8378;
 }
 
 .scores .maxScore {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .scores .currScore {
@@ -79,11 +81,11 @@ header {
 
 .playAgain button {
     width: 100px;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     background: #F4A460;
     border-style: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #8B8378;
 }
