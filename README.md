@@ -1,4 +1,6 @@
+
 # [demo展示](http://shirley5li.me/2018-contest/index.html) #
+
 
 # 2048小游戏原理 #
 用javascript和jQuery来写游戏逻辑，样式的话也没有使用样式库，用的纯粹的CSS。
@@ -62,3 +64,12 @@
 ```
 
 然后初始化游戏，监听再来一次按钮的点击事件，以及监听键盘的方向键触发盒子移动，适配移动端的手指滑动触发盒子移动。
+
+# 待解决问题 #
+1、页面滚动问题
+
+在google浏览器的手机模拟器中滑动时不会出现y方向的滚动，但是在手机端打开小游戏的github pages页面时，在y方向上滑动时，页面会滚动，有点影响游戏体验，尝试了将body的样式设置为`height:100%;overflow:hidden;`，但还是会滚动。目前还没找到怎么禁止y方向滚动的办法。希望有了解的小伙伴给与解答。
+
+2、页面缩放问题
+
+我在html文档头部使用了`<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">`，但在手机端还是可以双击放大，缩放问题也有些影响体验，同样希望有了解的小伙伴留下issues。
