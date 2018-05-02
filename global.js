@@ -309,33 +309,33 @@ window.onload = function () {
 
     // 移动端手指触摸滑动触发盒子移动
     (function () {
-            var boxesArea = document.getElementsByClassName('boxes')[0];
-            mobileTouch(boxesArea);
-            boxesArea.addEventListener('right', function(e) {
-                e.preventDefault();
-                isNewNum = false;
-                GAME.move('right');
-                GAME.isGameOver();
-            });
-            boxesArea.addEventListener('left', function(e) {
-                e.preventDefault();
-                isNewNum = false;
-                GAME.move('left');
-                GAME.isGameOver();
-            });
-            boxesArea.addEventListener('up', function(e) {
-                e.preventDefault();
-                isNewNum = false;
-                GAME.move('up');
-                GAME.isGameOver();
-            });
-            boxesArea.addEventListener('down', function(e) {
-                e.preventDefault();
-                isNewNum = false;
-                GAME.move('down');
-                GAME.isGameOver();
-            });
-            
+        var boxesArea = document.getElementsByClassName('boxes')[0];
+        mobileTouch(boxesArea);
+        boxesArea.addEventListener('right', function (e) {
+            e.preventDefault();
+            isNewNum = false;
+            GAME.move('right');
+            GAME.isGameOver();
+        });
+        boxesArea.addEventListener('left', function (e) {
+            e.preventDefault();
+            isNewNum = false;
+            GAME.move('left');
+            GAME.isGameOver();
+        });
+        boxesArea.addEventListener('up', function (e) {
+            e.preventDefault();
+            isNewNum = false;
+            GAME.move('up');
+            GAME.isGameOver();
+        });
+        boxesArea.addEventListener('down', function (e) {
+            e.preventDefault();
+            isNewNum = false;
+            GAME.move('down');
+            GAME.isGameOver();
+        });
+
 
         // 根据触摸开始和结束的位置，判断滑动方向，进而确定盒子的移动方向
         function mobileTouch(obj) {
@@ -396,4 +396,24 @@ window.onload = function () {
 
     })();
 
+    // safari页面缩放问题
+    // 禁用双指缩放
+    document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, {
+        capture: true,
+        passive: false
+    });
+
+    // 禁用手指双击缩放
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
 };

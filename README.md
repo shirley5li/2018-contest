@@ -73,3 +73,51 @@
 2、页面缩放问题
 
 我在html文档头部使用了`<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">`，但在手机端还是可以双击放大，缩放问题也有些影响体验，同样希望有了解的小伙伴留下issues。
+
+# 问题的解答 #
+关于以上待解决问题，还是[uni-zheng](https://github.com/uni-zheng)给与我答疑，不胜感激！！！
+
+1、页面滚动问题的解决
+
+给`html`和`body`标签添加如下样式：
+
+``` css
+
+	/* 禁止页面y方向滚动 */
+	html,
+	body {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	}
+```
+
+2、页面缩放问题的解决
+
+由于safari取消了meta 元素控制页面缩放(ios10之前有效的) ，使用js来hack一下：
+
+``` js
+
+		// safari页面缩放问题
+	    // 禁用双指缩放
+	    document.addEventListener('touchstart', function (event) {
+	        if (event.touches.length > 1) {
+	            event.preventDefault();
+	        }
+	    }, {
+	        capture: true,
+	        passive: false
+	    });
+	
+	    // 禁用手指双击缩放
+	    var lastTouchEnd = 0;
+	    document.addEventListener('touchend', function (event) {
+	        var now = (new Date()).getTime();
+	        if (now - lastTouchEnd <= 300) {
+	            event.preventDefault();
+	        }
+	        lastTouchEnd = now;
+	    }, false);
+```
