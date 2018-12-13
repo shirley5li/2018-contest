@@ -12,7 +12,7 @@
 
 当前阶段结构及样式如下：
 
-![2048游戏结构及样式阶段示意图](http://ou3oh86t1.bkt.clouddn.com/github/360%E5%89%8D%E7%AB%AF%E6%98%9F%E6%8A%80%E6%9C%AF%E6%B5%8B%E8%AF%84/2048%E6%B8%B8%E6%88%8F/2048%E6%B8%B8%E6%88%8F%E7%BB%93%E6%9E%84%E5%8F%8A%E6%A0%B7%E5%BC%8F%E9%98%B6%E6%AE%B5%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+![2048游戏结构及样式阶段示意图](https://githubrepobucket1-1258277786.cos.ap-shanghai.myqcloud.com/360-2018contest-2048game/2048%E6%B8%B8%E6%88%8F%E7%BB%93%E6%9E%84%E5%8F%8A%E6%A0%B7%E5%BC%8F%E9%98%B6%E6%AE%B5%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 
 ## 游戏逻辑 ##
 为了防止全局变量的污染，创建一个GAME对象，包括如下方法，负责处理盒子中数字的移动及合并，以及每次移动后产生随机数字2或者4，并且刷新不同数字对应的盒子的背景色。
